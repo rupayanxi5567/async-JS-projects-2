@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS Project-1</title>
+    
+    
+    <style>
+
+body{
+    background-color: grey;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <h1> Learning Mastery JS from Rup  </h1>
+
+    <button id="starting" > Start </button>
+
+    <button id="cancel" > Stop </button>
+    
+</body>
+<script>
+    let startStop;
+
+
+//starting
+
+
+document.getElementById("starting").addEventListener("click", function (e) {
+
+    let curDate = function(str){
+    console.log(str, Date.now());
+}
+
+startStop = setInterval(curDate, 1000, "puku")
+    
+} )
+
+
+
+//stopping
+
+document.getElementById("cancel").addEventListener("click", function (e) {
+
+
+clearInterval(startStop)
+
+} )
+
+</script>
+
+</html>
